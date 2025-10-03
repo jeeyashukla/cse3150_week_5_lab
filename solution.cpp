@@ -37,9 +37,6 @@ std::vector<int> merge_row(std::vector<int> row) {
     return compress_row(row);
 }
 
-
-
-
 void write_board_csv(const vector<vector<int>>& board, bool first, const string& stage) {
     ios_base::openmode mode = ios::app;
     if (first) mode = ios::trunc;
@@ -179,8 +176,6 @@ bool move_down(std::vector<std::vector<int>>& board) {
     return moved;
 }
 
-
-
 int compute_score(const std::vector<std::vector<int>>& board) {
     int score = 0;
     for (const auto& row : board)
@@ -188,7 +183,6 @@ int compute_score(const std::vector<std::vector<int>>& board) {
             score += val;
     return score;
 }
-
 
 int main(){
     vector<vector<int>> board(4, vector<int>(4,0));
